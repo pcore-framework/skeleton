@@ -1,14 +1,21 @@
 {
-  "name": "pcore/skeleton",
-  "description": "PCore skeleton",
-  "type": "project",
-  "homepage": "https://github.com/pcore-framework/skeleton",
-  "require": {
-    "php": "^8.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "src/"
-    }
-  }
+    "name": "pcore/skeleton",
+    "description": "PCore skeleton",
+    "type": "project",
+    "homepage": "https://github.com/pcore-framework/skeleton",
+    "require": {
+        "php": "^8.0",
+        "pcore/http-server": "dev-dev",
+        "pcore/config": "dev-dev",
+        "pcore/aop": "dev-dev",
+        "pcore/di": "dev-dev",
+        "pcore/event": "dev-dev",
+        "pcore/session": "dev-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
 }
