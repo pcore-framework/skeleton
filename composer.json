@@ -2,6 +2,8 @@
     "name": "pcore/skeleton",
     "description": "PCore skeleton",
     "type": "project",
+    "minimum-stability": "dev",
+    "license": "MIT",
     "homepage": "https://github.com/pcore-framework/skeleton",
     "require": {
         "php": "^8.0",
@@ -16,6 +18,5 @@
         "psr-4": {
             "App\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
