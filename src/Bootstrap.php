@@ -19,6 +19,7 @@ class Bootstrap
     {
         $container = Context::getContainer();
         $repository = $container->make(Repository::class);
+        $repository->scan(BASE_PATH . './config');
         if ($enable) {
             Scanner::init($loader, new ScannerConfig($repository->get('di.aop')));
         }
