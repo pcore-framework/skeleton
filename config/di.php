@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'aop' => [
+        'cache' => false,
         'paths' => ['./src'],
         'runtimeDir' => './runtime',
         'collectors' => [

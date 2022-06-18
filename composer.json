@@ -4,7 +4,6 @@
     "type": "project",
     "minimum-stability": "dev",
     "license": "MIT",
-    "homepage": "https://github.com/pcore-framework/skeleton",
     "require": {
         "php": "^8.0",
         "pcore/http-server": "dev-dev",
@@ -12,7 +11,8 @@
         "pcore/aop": "dev-dev",
         "pcore/di": "dev-dev",
         "pcore/event": "dev-dev",
-        "pcore/session": "dev-dev"
+        "pcore/session": "dev-dev",
+        "pcore/log": "dev-dev"
     },
     "autoload": {
         "psr-4": {
