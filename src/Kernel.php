@@ -11,6 +11,9 @@ use PCore\HttpServer\Kernel as HttpKernel;
 class Kernel extends HttpKernel
 {
 
-    protected array $middlewares = [];
+    protected array $middlewares = [
+        'App\Middlewares\ExceptionHandleMiddleware',
+        'PCore\HttpServer\Middlewares\RoutingMiddleware'
+    ];
 
 }
