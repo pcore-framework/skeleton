@@ -12,11 +12,15 @@
         "pcore/di": "dev-dev",
         "pcore/event": "dev-dev",
         "pcore/session": "dev-dev",
-        "pcore/log": "dev-dev"
+        "pcore/log": "dev-dev",
+        "pcore/console": "dev-dev"
     },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     }
 }

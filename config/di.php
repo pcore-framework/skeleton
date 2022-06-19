@@ -9,7 +9,8 @@ return [
         'runtimeDir' => './runtime',
         'collectors' => [
             'PCore\HttpServer\RouteCollector',
-            'PCore\Event\ListenerCollector'
+            'PCore\Event\ListenerCollector',
+            'PCore\Console\CommandCollector'
         ]
     ],
     'bindings' => [
