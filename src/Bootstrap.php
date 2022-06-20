@@ -27,7 +27,8 @@ class Bootstrap
             $container->bind($id, $value);
         }
         $listenerProvider = $container->make(ListenerProvider::class);
-        foreach (ListenerCollector::getListeners() as $listener) {
+        $listeners = $repository->get('listeners');
+        foreach (array_unique(array_merge(ListenerCollector::getListeners(), $listeners)) as $listener) {
             $listenerProvider->addListener($container->make($listener));
         }
     }
