@@ -13,7 +13,8 @@
         "pcore/event": "dev-dev",
         "pcore/session": "dev-dev",
         "pcore/log": "dev-dev",
-        "pcore/console": "dev-dev"
+        "pcore/console": "dev-dev",
+        "pcore/database": "dev-dev"
     },
     "autoload": {
         "psr-4": {
