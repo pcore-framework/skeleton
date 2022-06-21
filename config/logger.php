@@ -14,6 +14,14 @@ return [
                 'maxFiles' => 180,
                 'level' => Logger::WARNING
             ]
+        ],
+        'sql' => [
+            'handler' => 'Monolog\Handler\RotatingFileHandler',
+            'options' => [
+                'filename' => __DIR__ . '/../var/log/database/sql.log',
+                'maxFiles' => 180,
+                'level' => Logger::DEBUG
+            ]
         ]
     ]
 ];

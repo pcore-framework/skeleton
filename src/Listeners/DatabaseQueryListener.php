@@ -22,7 +22,13 @@ class DatabaseQueryListener implements EventListenerInterface
 
     public function process(object $event): void
     {
-        print_r($event);
+        if ($event instanceof QueryExecuted) {
+            $this->loggerFactory->get('sql')
+                ->debug($event->query, [
+                    'duration' => $event->duration,
+                    'bindings' => $event->bindings
+                ]);
+        }
     }
 
 }
