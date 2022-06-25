@@ -8,47 +8,43 @@ use PCore\HttpMessage\Response;
 use PCore\Routing\Annotations\Controller;
 use PCore\Routing\Annotations\GetMapping;
 use PCore\Routing\Annotations\PostMapping;
-use PCore\Routing\Annotations\PutMapping;
-use PCore\Routing\Annotations\DeleteMapping;
+use PCore\Validator\Validator;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 #[Controller(prefix: '/')]
 class IndexController
 {
 
     #[GetMapping(path: '/')]
-    public function get(): ResponseInterface
+    public function index(): ResponseInterface
     {
-        return (new Response())->json([
+        return Response::json([
             'status' => true,
-            'messages' => 'Method GET'
+            'messages' => 'PCore'
         ]);
     }
 
-    #[PostMapping(path: '/')]
-    public function post(): ResponseInterface
+    #[PostMapping(path: '/validator')]
+    public function validator(ServerRequestInterface $request): ResponseInterface
     {
-        return (new Response())->json([
-            'status' => true,
-            'messages' => 'Method POST'
+        $name = $request->get('title');
+        $validator = new Validator();
+        $validator->make([
+            'title' => $name
+        ], [
+            'title' => 'required|max:10|min:5'
         ]);
-    }
-
-    #[PutMapping(path: '/')]
-    public function put(): ResponseInterface
-    {
-        return (new Response())->json([
+        if ($validator->fails()) {
+            return Response::json([
+                'status' => false,
+                'errors' => $validator->failed()
+            ]);
+        }
+        $data = $validator->valid();
+        return Response::json([
             'status' => true,
-            'messages' => 'Method PUT'
-        ]);
-    }
-
-    #[DeleteMapping(path: '/')]
-    public function delete(): ResponseInterface
-    {
-        return (new Response())->json([
-            'status' => true,
-            'messages' => 'Method DELETE'
+            'data' => $data
         ]);
     }
 
