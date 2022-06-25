@@ -14,7 +14,9 @@
         "pcore/session": "v1.0.0",
         "pcore/log": "v1.0.0",
         "pcore/console": "v1.0.0",
-        "pcore/database": "v1.0.0"
+        "pcore/database": "v1.0.0",
+        "pcore/validator": "v1.0.0",
+        "pcore/redis": "v1.0.0"
     },
     "autoload": {
         "psr-4": {
