@@ -2,7 +2,12 @@
     "name": "pcore/skeleton",
     "description": "PCore skeleton",
     "type": "project",
-    "minimum-stability": "dev",
+    "keywords": [
+        "php",
+        "pcore",
+        "framework"
+    ],
+    "minimum-stability": "stable",
     "license": "MIT",
     "require": {
         "php": "^8.0",
