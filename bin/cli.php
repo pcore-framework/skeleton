@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Bootstrap;
 use PCore\Aop\Scanner;
 use PCore\Console\CommandCollector;
@@ -10,7 +12,7 @@ define('BASE_PATH', dirname(__DIR__) . '/');
 (function () {
     $loader = require_once './vendor/autoload.php';
     Bootstrap::boot($loader, true);
-    $config = Scanner::scanConfig(BASE_PATH . '/vendor/composer/installed.json');
+    $config = Scanner::scanConfig(base_path('vendor/composer/installed.json'));
     $application = new Application();
     $commands = array_merge($config['commands'], CommandCollector::all());
     foreach ($commands as $command) {
