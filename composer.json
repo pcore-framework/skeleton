@@ -6,15 +6,15 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "pcore/http-server": "dev-dev",
-        "pcore/config": "dev-dev",
-        "pcore/aop": "dev-dev",
-        "pcore/di": "dev-dev",
-        "pcore/event": "dev-dev",
-        "pcore/session": "dev-dev",
-        "pcore/log": "dev-dev",
-        "pcore/console": "dev-dev",
-        "pcore/database": "dev-dev"
+        "pcore/http-server": "v1.0.0",
+        "pcore/config": "v1.0.0",
+        "pcore/aop": "v1.0.0",
+        "pcore/di": "v1.0.0",
+        "pcore/event": "v1.0.0",
+        "pcore/session": "v1.0.0",
+        "pcore/log": "v1.0.0",
+        "pcore/console": "v1.0.0",
+        "pcore/database": "v1.0.0"
     },
     "autoload": {
         "psr-4": {
