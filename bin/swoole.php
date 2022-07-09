@@ -26,7 +26,8 @@ define('BASE_PATH', dirname(__DIR__) . '/');
         (new SwooleResponseEmitter())->emit($psrResponse, $response);
     });
     $server->set([
-        Constant::OPTION_WORKER_NUM => 4,
+        Constant::OPTION_WORKER_NUM  => 4,
+        Constant::OPTION_MAX_REQUEST => 100000
     ]);
     $server->start();
 })();
