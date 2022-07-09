@@ -11,17 +11,17 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "pcore/http-server": "v1.0.0",
-        "pcore/config": "v1.0.0",
-        "pcore/aop": "v1.0.0",
-        "pcore/di": "v1.0.0",
-        "pcore/event": "v1.0.0",
-        "pcore/session": "v1.0.0",
-        "pcore/log": "v1.0.0",
-        "pcore/console": "v1.0.0",
-        "pcore/database": "v1.0.0",
-        "pcore/validator": "v1.0.0",
-        "pcore/redis": "v1.0.0"
+        "pcore/http-server": "dev-main",
+        "pcore/config": "dev-main",
+        "pcore/aop": "dev-main",
+        "pcore/di": "dev-main",
+        "pcore/event": "dev-main",
+        "pcore/session": "dev-main",
+        "pcore/log": "dev-main",
+        "pcore/console": "dev-main",
+        "pcore/database": "dev-main",
+        "pcore/validator": "dev-main",
+        "pcore/redis": "dev-main"
     },
     "autoload": {
         "psr-4": {
