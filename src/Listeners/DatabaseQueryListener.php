@@ -8,6 +8,10 @@ use PCore\Database\Events\QueryExecuted;
 use PCore\Event\Contracts\EventListenerInterface;
 use PCore\Log\LoggerFactory;
 
+/**
+ * Class DatabaseQueryListener
+ * @package App\Listeners
+ */
 class DatabaseQueryListener implements EventListenerInterface
 {
 

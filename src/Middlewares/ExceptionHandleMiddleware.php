@@ -9,8 +9,16 @@ use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
 use Psr\Log\LoggerInterface;
 use Throwable;
 
+/**
+ * Class ExceptionHandleMiddleware
+ * @package App\Http\Middlewares
+ */
 class ExceptionHandleMiddleware extends HttpExceptionHandleMiddleware
 {
+
+    protected array $exceptionHandlers = [
+        'App\Exceptions\Handlers\HttpExceptionHandler'
+    ];
 
     public function __construct(protected LoggerInterface $logger)
     {
