@@ -6,7 +6,7 @@ use Composer\Autoload\ClassLoader;
 use PCore\Aop\{Scanner, ScannerConfig};
 use PCore\Config\Repository;
 use PCore\Di\Context;
-use PCore\Event\{ListenerProvider, ListenerCollector};
+use PCore\Event\{ListenerCollector, ListenerProvider};
 
 /**
  * Class Bootstrap

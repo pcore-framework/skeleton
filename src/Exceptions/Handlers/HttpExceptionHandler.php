@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Exceptions\Handlers;
 
 use PCore\HttpMessage\Exceptions\HttpException;
-use PCore\HttpServer\Contracts\{ExceptionHandlerInterface, StoppableExceptionHandlerInterface};
 use PCore\HttpMessage\Response;
+use PCore\HttpServer\Contracts\{ExceptionHandlerInterface, StoppableExceptionHandlerInterface};
 use Psr\Http\Message\{ResponseInterface, ServerRequestInterface};
 use Throwable;
 

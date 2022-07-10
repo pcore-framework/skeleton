@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use App\Bootstrap;
 use App\Kernel;
-use PCore\HttpMessage\ServerRequest;
 use PCore\Di\Context;
+use PCore\HttpMessage\ServerRequest;
 use PCore\HttpServer\ResponseEmitter\FPMResponseEmitter;
 
 (function () {

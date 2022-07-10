@@ -1,6 +1,6 @@
 <?php
 
-if (false === function_exists('base_path')) {
+if (function_exists('base_path') === false) {
     /**
      * @param string $path
      * @return string
