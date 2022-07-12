@@ -6,7 +6,7 @@ return [
     'aop' => [
         'cache' => false,
         'paths' => ['./src'],
-        'runtimeDir' => './runtime',
+        'runtimeDir' => './var/runtime',
         'collectors' => [
             'PCore\HttpServer\RouteCollector',
             'PCore\Event\ListenerCollector',
@@ -16,6 +16,6 @@ return [
     'bindings' => [
         'PCore\Config\Contracts\ConfigInterface' => 'PCore\Config\Repository',
         'Psr\EventDispatcher\EventDispatcherInterface' => 'PCore\Event\EventDispatcher',
-        'Psr\Log\LoggerInterface' => 'PCore\Log\Logger'
+        'Psr\Log\LoggerInterface' => 'App\Kernel\Logger'
     ]
 ];

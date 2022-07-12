@@ -17,7 +17,6 @@
         "pcore/di": "dev-main",
         "pcore/event": "dev-main",
         "pcore/session": "dev-main",
-        "pcore/log": "dev-main",
         "pcore/console": "dev-main",
         "pcore/database": "dev-main",
         "pcore/validator": "dev-main",
@@ -28,7 +27,11 @@
             "App\\": "src/"
         },
         "files": [
-            "src/helpers.php"
+            "src/Kernel/helpers.php"
         ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
     }
 }

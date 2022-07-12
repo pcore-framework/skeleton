@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Bootstrap;
-use App\Kernel;
+use App\Kernel\{Bootstrap, Kernel};
 use PCore\Di\Context;
 use PCore\HttpMessage\ServerRequest;
 use PCore\HttpServer\ResponseEmitter\FPMResponseEmitter;

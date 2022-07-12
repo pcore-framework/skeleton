@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+declare(strict_types=1);
+
+namespace App\Kernel;
 
 use Composer\Autoload\ClassLoader;
 use PCore\Aop\{Scanner, ScannerConfig};
@@ -10,7 +12,7 @@ use PCore\Event\{ListenerCollector, ListenerProvider};
 
 /**
  * Class Bootstrap
- * @package App
+ * @package App\Kernel
  */
 class Bootstrap
 {
@@ -20,6 +22,10 @@ class Bootstrap
         $container = Context::getContainer();
         $repository = $container->make(Repository::class);
         $repository->scan(base_path('./config'));
+        $logger = $container->make(Logger::class);
+        if ('cli' === PHP_SAPI) {
+            $logger->debug('Сервер запущен.');
+        }
         if ($enable) {
             Scanner::init($loader, new ScannerConfig($repository->get('di.aop')));
         }

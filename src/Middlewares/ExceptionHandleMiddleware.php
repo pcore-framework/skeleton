@@ -8,7 +8,7 @@ use PCore\HttpServer\Middlewares\ExceptionHandleMiddleware as HttpExceptionHandl
 
 /**
  * Class ExceptionHandleMiddleware
- * @package App\Http\Middlewares
+ * @package App\Middlewares
  */
 class ExceptionHandleMiddleware extends HttpExceptionHandleMiddleware
 {

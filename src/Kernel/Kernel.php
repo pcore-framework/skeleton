@@ -1,19 +1,21 @@
 <?php
 
-namespace App;
+declare(strict_types=1);
+
+namespace App\Kernel;
 
 use PCore\HttpServer\Kernel as HttpKernel;
 
 /**
  * Class Kernel
- * @package App
+ * @package App\Kernel
  */
 class Kernel extends HttpKernel
 {
 
     protected array $middlewares = [
         'App\Middlewares\ExceptionHandleMiddleware',
-        'PCore\HttpServer\Middlewares\CorsMiddleware',
+        'App\Middlewares\CorsMiddleware',
         'PCore\HttpServer\Middlewares\RoutingMiddleware'
     ];
 
