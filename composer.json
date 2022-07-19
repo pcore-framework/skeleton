@@ -20,7 +20,8 @@
         "pcore/console": "dev-main",
         "pcore/database": "dev-main",
         "pcore/validator": "dev-main",
-        "pcore/redis": "dev-main"
+        "pcore/redis": "dev-main",
+        "pcore/cache": "dev-main"
     },
     "autoload": {
         "psr-4": {
