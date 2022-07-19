@@ -8,8 +8,8 @@ use PCore\HttpMessage\ServerRequest;
 use PCore\HttpServer\ResponseEmitter\FPMResponseEmitter;
 
 (function () {
-    $loader = require_once '../vendor/autoload.php';
-    Bootstrap::boot($loader, false);
+    require_once __DIR__ . '/../vendor/autoload.php';
+    Bootstrap::boot(false);
     /** @var Kernel $kernel */
     $kernel = Context::getContainer()->make(Kernel::class);
     $response = $kernel->through(ServerRequest::createFromGlobals());

@@ -11,11 +11,11 @@ use Swoole\Http\{Request, Response, Server};
 define('BASE_PATH', dirname(__DIR__) . '/');
 
 (function () {
-    $loader = require_once './vendor/autoload.php';
+    require_once './vendor/autoload.php';
     if (!class_exists('Swoole\Server')) {
         throw new Exception('Требуется swoole');
     }
-    Bootstrap::boot($loader, true);
+    Bootstrap::boot(true);
     $config = config('server.swoole', []);
     $server = new Server($config['host'], $config['port']);
     /** @var Kernel $kernel */

@@ -8,7 +8,7 @@ use Symfony\Component\Console\Application;
 define('BASE_PATH', dirname(__DIR__) . '/');
 
 (function () {
-    $loader = require_once './vendor/autoload.php';
-    Bootstrap::boot($loader, true);
+    require_once './vendor/autoload.php';
+    Bootstrap::boot(true);
     (new Console())->run();
 })();
