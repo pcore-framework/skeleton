@@ -8,13 +8,14 @@ return [
         'file' => [
             'handler' => 'PCore\Cache\Handlers\FileHandler',
             'options' => [
-                'path' => __DIR__ . '/../var/cache/app'
+                'path' => __DIR__ . '/../runtime/cache/app'
             ]
         ],
         'redis' => [
             'handler' => 'PCore\Cache\Handlers\RedisHandler',
             'options' => [
-                'connection' => 'redis'
+                'connector' => \PCore\Redis\Connectors\BaseConnector::class,
+                'config' => []
             ]
         ],
         'memcached' => [

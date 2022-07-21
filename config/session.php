@@ -17,8 +17,8 @@ return [
         'redis' => [
             'handler' => 'PCore\Session\Handlers\RedisHandler',
             'options' => [
-                'connection' => 'redis',
-                'expire' => 3600
+                'connector' => \PCore\Redis\Connectors\BaseConnector::class,
+                'config' => []
             ]
         ]
     ]
