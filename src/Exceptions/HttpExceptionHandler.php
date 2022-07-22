@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Exceptions\Handlers;
+namespace App\Exceptions;
 
 use PCore\HttpMessage\Exceptions\HttpException;
 use PCore\HttpMessage\Response;
@@ -12,7 +12,7 @@ use Throwable;
 
 /**
  * Class HttpExceptionHandler
- * @package App\Exceptions\Handlers
+ * @package App\Exceptions
  */
 class HttpExceptionHandler implements ExceptionHandlerInterface, StoppableExceptionHandlerInterface
 {

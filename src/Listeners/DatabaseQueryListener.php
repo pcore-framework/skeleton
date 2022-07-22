@@ -19,18 +19,27 @@ class DatabaseQueryListener implements EventListenerInterface
     {
     }
 
+    /**
+     * @return iterable
+     */
     public function listen(): iterable
     {
         return [QueryExecuted::class];
     }
 
+    /**
+     * @param object $event
+     */
     public function process(object $event): void
     {
         if ($event instanceof QueryExecuted) {
-            $this->logger->get('sql')->debug($event->query, [
-                'duration' => $event->duration,
-                'bindings' => $event->bindings
-            ]);
+            $this->logger->get('sql')->debug(
+                $event->query,
+                [
+                    'duration' => $event->duration,
+                    'bindings' => $event->bindings
+                ]
+            );
         }
     }
 

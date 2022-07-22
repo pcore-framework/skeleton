@@ -14,7 +14,7 @@ class ExceptionHandleMiddleware extends HttpExceptionHandleMiddleware
 {
 
     protected array $exceptionHandlers = [
-        'App\Exceptions\Handlers\HttpExceptionHandler'
+        'App\Exceptions\HttpExceptionHandler'
     ];
 
 }
