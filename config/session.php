@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'default' => 'redis',
+    'default' => 'file',
     'stores' => [
         'file' => [
             'handler' => 'PCore\Session\Handlers\FileHandler',
