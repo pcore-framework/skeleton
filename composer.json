@@ -5,7 +5,11 @@
     "keywords": [
         "php",
         "pcore",
-        "framework"
+        "skeleton",
+        "framework",
+        "pcore-framework",
+        "swoole",
+        "fpm"
     ],
     "minimum-stability": "stable",
     "license": "MIT",
